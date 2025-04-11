@@ -2,42 +2,29 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
   <title>Gửi Dung nè✌️</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       background: #d4b08b;
       font-family: 'Courier New', Courier, monospace;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
+      justify-content: center;
+      align-items: center;
       min-height: 100vh;
-      padding: 1em;
+      padding: 1rem;
     }
 
     .envelope-container {
       position: relative;
       width: 100%;
-      max-width: 420px;
+      max-width: 500px;
       background: #c49b6e;
-      border-radius: 1em;
-      padding: 2em 1em;
+      border-radius: 10px;
+      padding: 2rem 1.5rem;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
       text-align: center;
-      overflow-y: auto;
-      max-height: 90vh;
-      -webkit-overflow-scrolling: touch;
+      box-sizing: border-box;
     }
 
     .heart-button {
@@ -45,65 +32,56 @@
       color: white;
       border: none;
       border-radius: 50%;
-      width: 2.8em;
-      height: 2.8em;
-      font-size: 1.4em;
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 1.2rem;
       cursor: pointer;
       position: absolute;
-      top: -1.4em;
+      top: -1.25rem;
       left: 50%;
-      -webkit-transform: translateX(-50%);
-          -ms-transform: translateX(-50%);
-              transform: translateX(-50%);
+      transform: translateX(-50%);
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      -webkit-transition: -webkit-transform 0.2s ease;
-      transition: -webkit-transform 0.2s ease;
-      transition: transform 0.2s ease;
-      transition: transform 0.2s ease, -webkit-transform 0.2s ease;
-    }
-
-    .heart-button:hover {
-      -webkit-transform: translateX(-50%) scale(1.1);
-          -ms-transform: translateX(-50%) scale(1.1);
-              transform: translateX(-50%) scale(1.1);
     }
 
     .message {
       display: none;
-      margin-top: 1.5em;
+      margin-top: 1.5rem;
       font-size: 1rem;
       color: #4e342e;
       line-height: 1.6;
+      word-wrap: break-word;
     }
 
     .show .message {
       display: block;
-      -webkit-animation: fadeIn 1s ease-in;
-              animation: fadeIn 1s ease-in;
+      animation: fadeIn 1s ease-in;
     }
 
-    @-webkit-keyframes fadeIn {
-      from { opacity: 0; -webkit-transform: translateY(-10px); transform: translateY(-10px); }
-      to { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
+    .message h1 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; -webkit-transform: translateY(-10px); transform: translateY(-10px); }
-      to { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    @media (max-width: 430px) {
-      .envelope-container {
-        padding: 1.5em 1em;
-      }
-
+    @media (max-width: 400px) {
       .heart-button {
-        width: 2.5em;
-        height: 2.5em;
-        font-size: 1.2em;
+        width: 2.2rem;
+        height: 2.2rem;
+        font-size: 1rem;
       }
 
-      .message {
+      .message h1 {
         font-size: 0.95rem;
       }
     }
@@ -123,8 +101,7 @@
         Tôi vẫn và sẽ luôn yêu thương, chiều chuộng và trân trọng bác bằng tất cả những gì tôi có🫵.
         Thật may mắn bác đã tới bên tôi, vậy nên hãy cùng nhau cố gắng yêu nhau thật lâu nhá🫣!!
       </h1>
-      <h1 style="margin-top: 1em;">Tôi yêu Hà Dung nhiều lắm🫶</h1>
-      <br>
+      <h1>Tôi yêu Hà Dung nhiều lắm🫶</h1>
       <h1>-- Người yêu của Hà Dung --</h1>
     </div>
   </div>
