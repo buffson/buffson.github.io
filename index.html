@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Love Letter</title>
+  <meta charset="UTF-8">
+  <title>Gửi Dung nè✌️</title>
   <style>
     * {
       box-sizing: border-box;
@@ -12,16 +13,22 @@
       margin: 0;
       background: #d4b08b;
       font-family: 'Courier New', Courier, monospace;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       min-height: 100vh;
       padding: 1em;
     }
 
     .envelope-container {
       position: relative;
-      width: 90%;
+      width: 100%;
       max-width: 420px;
       background: #c49b6e;
       border-radius: 1em;
@@ -30,6 +37,7 @@
       text-align: center;
       overflow-y: auto;
       max-height: 90vh;
+      -webkit-overflow-scrolling: touch;
     }
 
     .heart-button {
@@ -44,31 +52,44 @@
       position: absolute;
       top: -1.4em;
       left: 50%;
-      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      -webkit-transition: -webkit-transform 0.2s ease;
+      transition: -webkit-transform 0.2s ease;
       transition: transform 0.2s ease;
+      transition: transform 0.2s ease, -webkit-transform 0.2s ease;
     }
 
     .heart-button:hover {
-      transform: translateX(-50%) scale(1.1);
+      -webkit-transform: translateX(-50%) scale(1.1);
+          -ms-transform: translateX(-50%) scale(1.1);
+              transform: translateX(-50%) scale(1.1);
     }
 
     .message {
       display: none;
       margin-top: 1.5em;
-      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      font-size: 1rem;
       color: #4e342e;
       line-height: 1.6;
     }
 
     .show .message {
       display: block;
-      animation: fadeIn 1s ease-in;
+      -webkit-animation: fadeIn 1s ease-in;
+              animation: fadeIn 1s ease-in;
+    }
+
+    @-webkit-keyframes fadeIn {
+      from { opacity: 0; -webkit-transform: translateY(-10px); transform: translateY(-10px); }
+      to { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; -webkit-transform: translateY(-10px); transform: translateY(-10px); }
+      to { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
     }
 
     @media (max-width: 430px) {
@@ -83,7 +104,7 @@
       }
 
       .message {
-        font-size: clamp(0.9rem, 2.8vw, 1rem);
+        font-size: 0.95rem;
       }
     }
   </style>
