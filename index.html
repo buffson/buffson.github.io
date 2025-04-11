@@ -1,88 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gửi Dung nè✌️</title>
-    <style>
-      body {
-        font-family: "Arial", sans-serif;
-        background: linear-gradient(135deg, #86f759, #bcc0b9);
-        margin: 0;
-        color: #fff;
-        padding: 40px 20px;
-        box-sizing: border-box;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start; /* align content toward the top */
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Letter</title>
+  <style>
+    body {
+      margin: 0;
+      background: #d4b08b;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 1em;
+      box-sizing: border-box;
+    }
+
+    .envelope-container {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      background: #c49b6e;
+      border-radius: 1em;
+      padding: 2em 1em;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .heart-button {
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 2.5em;
+      height: 2.5em;
+      font-size: 1.2em;
+      cursor: pointer;
+      position: absolute;
+      top: -1.25em;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .heart-button:hover {
+      transform: translateX(-50%) scale(1.1);
+    }
+
+    .message {
+      display: none;
+      margin-top: 1.5em;
+      font-size: 1em;
+      color: #4e342e;
+      line-height: 1.6;
+    }
+
+    .show .message {
+      display: block;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 400px) {
+      .envelope-container {
+        padding: 1.5em 1em;
       }
-    
-      .message-container {
-        background: rgba(0, 0, 0, 0.5);
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        max-width: 600px;
-        width: 100%;
-        margin-top: 30px;
+
+      .heart-button {
+        width: 2.2em;
+        height: 2.2em;
+        font-size: 1em;
       }
-    
-      .heart {
-        color: #ff4d88;
-        font-size: 50px;
-        margin-bottom: 20px;
-        text-align: center;
+
+      .message {
+        font-size: 0.95em;
       }
-    
-      h1 {
-        font-size: 28px;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-      }
-    
-      p {
-        font-size: 18px;
-        margin-top: 15px;
-        line-height: 1.6;
-      }
-    
-      @media (max-width: 414px) {
-        .message-container {
-          padding: 20px;
-        }
-    
-        .heart {
-          font-size: 40px;
-        }
-    
-        h1 {
-          font-size: 22px;
-        }
-    
-        p {
-          font-size: 16px;
-        }
-      }
-    </style>
-    
-  </head>
-  <body>
-    <div class="message-container">
-      <div class="heart">❤️</div>
-  <h1>Chuẩn bị đạt được streak 2 tháng nên tôi cũng có đôi lời muốn gửi gắm đến cô người yêu xinh gái đáng yêu của tôi</h1>
-      <p>
-        Tôi không kì vọng một mối quan hệ hoàn hảo vì cả tôi với bác sẽ luôn có
-        thiếu sót tại thời điểm nào đó, tôi chỉ mong chúng ta sẽ đừng bao giờ
-        từ bỏ nhau🥹. Dù có khó khăn đến đâu, tôi vẫn sẽ luôn chọn ở lại đồng
-        hành với bác, đương nhiên là rời bỏ bác sẽ không bao giờ là lựa chọn của
-        tôi rồi😆. Tôi vẫn và sẽ luôn yêu thương, chiều chuộng và trân trọng bác
-        bằng tất cả những gì tôi có thể cho bác🫵. Vậy nên hãy cùng nhau cố gắng
-        nhá🫣!!!
-      </p>
-      <h1>Mãi yêu Hà Dung🫶</h1>
+    }
+  </style>
+</head>
+<body>
+
+  <div class="envelope-container" id="envelope">
+    <button class="heart-button" onclick="showMessage()">❤</button>
+    <div class="message">
+      <h1 style="font-size: 1.1em;">
+        Tôi chưa bao giờ kì vọng mối quan hệ của chúng ta sẽ luôn hoàn hảo cả vì đây đều là lần đầu yêu của cả hai,
+        tôi chỉ mong chúng ta sẽ đừng bao giờ từ bỏ nhau, hãy vì nhau mà nỗ lực để cả hai trưởng thành hơn🥹.
+        Dù có khó khăn đến đâu, tôi vẫn sẽ luôn chọn ở lại đồng hành với bác để chắc chắn rằng khi bác cảm thấy mọi thứ quá khó khăn,
+        chỉ cần quay đầu lại là liền thấy tôi vẫn đang ở đó sẵn sàng giúp đỡ bác nên đừng ngần ngại nhé😉,
+        và đương nhiên là rời bỏ bác sẽ không bao giờ là lựa chọn của tôi rồi😆.
+        Tôi vẫn và sẽ luôn yêu thương, chiều chuộng và trân trọng bác bằng tất cả những gì tôi có🫵.
+        Thật may mắn bác đã tới bên tôi, vậy nên hãy cùng nhau cố gắng yêu nhau thật lâu nhá🫣!!
+      </h1>
+      <h1 style="font-size: 1.2em; margin-top: 1em;">Tôi yêu Hà Dung nhiều lắm🫶</h1>
+      <br>
+      <h1 style="font-size: 1em;">-- Người yêu của Hà Dung --</h1>
     </div>
-  </body>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById('envelope').classList.toggle('show');
+    }
+  </script>
+
+</body>
 </html>
