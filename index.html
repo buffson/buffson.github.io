@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gửi Dung nè✌️</title>
+  <title>Love Letter</title>
   <style>
     body {
       margin: 0;
@@ -11,54 +11,50 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      padding: 1rem;
+      height: 100vh;
+      padding: 1em;
+      box-sizing: border-box;
     }
 
     .envelope-container {
       position: relative;
       width: 100%;
-      max-width: 500px;
+      max-width: 400px;
       background: #c49b6e;
-      border-radius: 10px;
-      padding: 2rem 1.5rem;
+      border-radius: 1em;
+      padding: 2em 1em;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
       text-align: center;
-      box-sizing: border-box;
+      transition: all 0.3s ease-in-out;
     }
 
     .heart-button {
-/*       background: red;
+      background: red;
       color: white;
       border: none;
       border-radius: 50%;
-      width: 2.5rem;
-      height: 2.5rem;
-      font-size: 1.2rem;
+      width: 2.5em;
+      height: 2.5em;
+      font-size: 1.2em;
       cursor: pointer;
       position: absolute;
-      top: -1.25rem;
+      top: -1.25em;
       left: 50%;
       transform: translateX(-50%);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 45px;
-      color: #ff4d88;
-/*       transition: transform 0.2s; */
-      transform: translateX(-50%);
-      margin-top: 15px;
-      margin-left: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .heart-button:hover {
+      transform: translateX(-50%) scale(1.1);
     }
 
     .message {
       display: none;
-      margin-top: 1.5rem;
-      font-size: 1rem;
+      margin-top: 1.5em;
+      font-size: 1em;
       color: #4e342e;
       line-height: 1.6;
-      word-wrap: break-word;
     }
 
     .show .message {
@@ -66,32 +62,24 @@
       animation: fadeIn 1s ease-in;
     }
 
-    .message h1 {
-      font-size: 1rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 400px) {
-      .heart-button {
-        width: 2.2rem;
-        height: 2.2rem;
-        font-size: 1rem;
+      .envelope-container {
+        padding: 1.5em 1em;
       }
 
-      .message h1 {
-        font-size: 0.95rem;
+      .heart-button {
+        width: 2.2em;
+        height: 2.2em;
+        font-size: 1em;
+      }
+
+      .message {
+        font-size: 0.95em;
       }
     }
   </style>
@@ -99,16 +87,9 @@
 <body>
 
   <div class="envelope-container" id="envelope">
-    <button class="heart-button" onclick="showMessage()">
-<!--       <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42
-                 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 
-                 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 
-                 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-      </svg> -->❤️
-    </button>
+    <button class="heart-button" onclick="showMessage()">❤</button>
     <div class="message">
-      <h1>
+      <h1 style="font-size: 1.1em;">
         Tôi chưa bao giờ kì vọng mối quan hệ của chúng ta sẽ luôn hoàn hảo cả vì đây đều là lần đầu yêu của cả hai,
         tôi chỉ mong chúng ta sẽ đừng bao giờ từ bỏ nhau, hãy vì nhau mà nỗ lực để cả hai trưởng thành hơn🥹.
         Dù có khó khăn đến đâu, tôi vẫn sẽ luôn chọn ở lại đồng hành với bác để chắc chắn rằng khi bác cảm thấy mọi thứ quá khó khăn,
@@ -117,8 +98,9 @@
         Tôi vẫn và sẽ luôn yêu thương, chiều chuộng và trân trọng bác bằng tất cả những gì tôi có🫵.
         Thật may mắn bác đã tới bên tôi, vậy nên hãy cùng nhau cố gắng yêu nhau thật lâu nhá🫣!!
       </h1>
-      <h1>Tôi yêu Hà Dung nhiều lắm🫶</h1>
-      <h1>-- Người yêu của Hà Dung --</h1>
+      <h1 style="font-size: 1.2em; margin-top: 1em;">Tôi yêu Hà Dung nhiều lắm🫶</h1>
+      <br>
+      <h1 style="font-size: 1em;">-- Người yêu của Hà Dung --</h1>
     </div>
   </div>
 
