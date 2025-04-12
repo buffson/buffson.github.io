@@ -24,8 +24,8 @@
     .envelope-container {
       position: relative;
       width: 100%;
-      max-width: 350px;
-      height: 260px;
+      max-width: 450px;
+      height: 340px;
       perspective: 1200px;
     }
 
@@ -55,8 +55,8 @@
       top: 58%;
       left: 50%;
       transform: translate(-50%, -50%) rotate(-45deg);
-      width: 40px;
-      height: 40px;
+      width: 55px;
+      height: 55px;
       background-color: #e63946;
       border-radius: 50%;
       cursor: pointer;
@@ -66,8 +66,8 @@
     .heart-btn::after {
       content: "";
       position: absolute;
-      width: 40px;
-      height: 40px;
+      width: 55px;
+      height: 55px;
       background-color: #e63946;
       border-radius: 50%;
       top: 0;
@@ -80,7 +80,7 @@
       top: 100%;
       left: 5%;
       width: 90%;
-      height: 180px;
+      height: 240px;
       background: #ffedde;
       border-radius: 8px;
       padding: 10px 15px;
@@ -104,9 +104,9 @@
       opacity: 0;
       transform: translateY(20px);
       transition: all 1s ease;
-      font-size: 14px;
+      font-size: 16px;
       color: #333;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .open .flap {
@@ -130,20 +130,18 @@
       margin-bottom: 12px;
     }
 
-    @media (max-width: 390px) {
+    @media (max-width: 414px) {
+      .envelope-container {
+        max-width: 380px;
+        height: 320px;
+      }
+
       .letter {
-        height: 160px;
-        padding: 10px;
+        height: 220px;
       }
 
       h1 {
-        font-size: 14px;
-      }
-    }
-
-    @media (max-height: 700px) {
-      .letter {
-        height: 150px;
+        font-size: 15px;
       }
     }
   </style>
@@ -151,7 +149,7 @@
 <body>
 
 <div class="envelope-container" id="envelopeBox">
-  <div class="envelope" class="heart-btn" id="openBtn">
+  <div class="envelope" id="openBtn">
     <div class="flap"></div>
     <div class="letter">
       <div class="message">
