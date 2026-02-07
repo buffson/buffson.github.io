@@ -4,103 +4,104 @@
   <meta charset="UTF-8">
   <title>Câu hỏi</title>
   <style>
-                        .particle {
-                          position: absolute;
-                          width: 18px;
-                          height: 18px;
-                          pointer-events: none;
-                          z-index: 3;
-                          opacity: 0.7;
-                          animation: particle-move 3s linear forwards;
-                        }
-                        @keyframes particle-move {
-                          0% { opacity: 0.7; transform: scale(1) translateY(0); }
-                          50% { opacity: 1; transform: scale(1.2) translateY(-30px); }
-                          100% { opacity: 0; transform: scale(0.8) translateY(60px); }
-                        }
-                    .popup {
-                      animation: popup-zoom 0.5s cubic-bezier(.68,-0.55,.27,1.55);
-                    }
-                    @keyframes popup-zoom {
-                      0% { transform: scale(0.7); opacity: 0; }
-                      60% { transform: scale(1.1); opacity: 1; }
-                      100% { transform: scale(1); opacity: 1; }
-                    }
-                .sparkle {
-                  position: absolute;
-                  width: 12px;
-                  height: 12px;
-                  pointer-events: none;
-                  z-index: 2;
-                  border-radius: 50%;
-                  background: radial-gradient(circle, #fff 60%, #ffb6b9 100%);
-                  opacity: 0.8;
-                  animation: sparkle-move 2.5s linear forwards;
-                }
-                @keyframes sparkle-move {
-                  0% { opacity: 0.8; }
-                  50% { opacity: 1; }
-                  100% { opacity: 0; transform: scale(1.5); }
-                }
-            .heart3d {
-              position: absolute;
-              width: 40px;
-              height: 40px;
-              pointer-events: none;
-              z-index: 10;
-              filter: drop-shadow(0 8px 16px #d7263d66);
-              opacity: 0.9;
-              animation: heart3d-fall 2.2s linear forwards;
-            }
-            @keyframes heart3d-fall {
-              0% {
-                transform: translateY(0) scale(1) rotateY(0deg);
-                opacity: 1;
-              }
-              50% {
-                transform: translateY(50vh) scale(1.2) rotateY(180deg);
-                opacity: 0.8;
-              }
-              100% {
-                transform: translateY(100vh) scale(0.8) rotateY(360deg);
-                opacity: 0.2;
-              }
-            }
-        .overlay {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          height: 100vh;
-          background: rgba(0,0,0,0.3);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          z-index: 100;
-        }
-        .popup {
-          background: #fff6f6;
-          border-radius: 24px;
-          box-shadow: 0 8px 32px #d7263d33;
-          padding: 32px 24px;
-          font-size: 28px;
-          color: #d7263d;
-          position: relative;
-          min-width: 320px;
-          text-align: center;
-          font-family: 'Segoe Script', 'Comic Sans MS', cursive, Arial, sans-serif;
-        }
-        .close-btn {
-          position: absolute;
-          top: 12px;
-          right: 16px;
-          font-size: 24px;
-          color: #d7263d;
-          background: none;
-          border: none;
-          cursor: pointer;
-          font-weight: bold;
-        }
+    .particle {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      pointer-events: none;
+      z-index: 3;
+      opacity: 0.7;
+      animation: particle-move 3s linear forwards;
+    }
+    @keyframes particle-move {
+      0% { opacity: 0.7; transform: scale(1) translateY(0); }
+      50% { opacity: 1; transform: scale(1.2) translateY(-30px); }
+      100% { opacity: 0; transform: scale(0.8) translateY(60px); }
+    }
+
+    .popup {
+      animation: popup-zoom 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+
+    @keyframes popup-zoom {
+      0% { transform: scale(0.7); opacity: 0; }
+      60% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      pointer-events: none;
+      z-index: 2;
+      border-radius: 50%;
+      background: radial-gradient(circle, #fff 60%, #ffb6b9 100%);
+      opacity: 0.8;
+      animation: sparkle-move 2.5s linear forwards;
+    }
+
+    @keyframes sparkle-move {
+      0% { opacity: 0.8; }
+      50% { opacity: 1; }
+      100% { opacity: 0; transform: scale(1.5); }
+    }
+
+    .heart3d {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      pointer-events: none;
+      z-index: 10;
+      filter: drop-shadow(0 8px 16px #d7263d66);
+      opacity: 0.9;
+      animation: heart3d-fall 2.2s linear forwards;
+    }
+
+    @keyframes heart3d-fall {
+      0% { transform: translateY(0) scale(1) rotateY(0deg); opacity: 1; }
+      50% { transform: translateY(50vh) scale(1.2) rotateY(180deg); opacity: 0.8; }
+      100% { transform: translateY(100vh) scale(0.8) rotateY(360deg); opacity: 0.2; }
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+    }
+
+    .popup {
+      background: #fff6f6;
+      border-radius: 24px;
+      box-shadow: 0 8px 32px #d7263d33;
+      padding: 32px 24px;
+      font-size: 28px;
+      color: #d7263d;
+      position: relative;
+      min-width: 320px;
+      text-align: center;
+      font-family: 'Segoe Script', 'Comic Sans MS', cursive, Arial, sans-serif;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      font-size: 24px;
+      color: #d7263d;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
     body {
       font-family: 'Segoe Script', 'Comic Sans MS', cursive, Arial, sans-serif;
       text-align: center;
@@ -111,6 +112,7 @@
       min-height: 100vh;
       overflow: hidden;
     }
+
     .heart {
       position: absolute;
       width: 32px;
@@ -119,11 +121,13 @@
       pointer-events: none;
       z-index: 10;
     }
+
     .heart svg {
       width: 100%;
       height: 100%;
       display: block;
     }
+
     #question {
       font-size: 48px;
       margin-bottom: 40px;
@@ -132,23 +136,33 @@
       text-shadow: 0 2px 8px #fff6f6, 0 0px 20px #d7263d44;
       font-family: 'Segoe Script', 'Comic Sans MS', cursive, Arial, sans-serif;
     }
+
     @media (max-width: 600px) {
       body {
         margin-top: 40px;
       }
+
       #question {
-        font-size: 32px;
+        font-size: 40px; /* Increased font size for mobile */
       }
+
       .btn {
-        font-size: 18px;
-        padding: 12px 24px;
+        font-size: 24px; /* Increased font size for buttons */
+        padding: 18px 36px; /* Increased padding for bigger buttons */
+      }
+
+      .btn-yes, .btn-no {
+        font-size: 28px; /* Increased font size for Yes/No buttons */
+        padding: 20px 40px; /* Increased padding for buttons */
       }
     }
+
     #question {
       font-size: 48px;
       margin-bottom: 40px;
       transition: font-size 0.3s;
     }
+
     .btn {
       font-size: 24px;
       padding: 16px 40px;
@@ -158,27 +172,32 @@
       cursor: pointer;
       transition: font-size 0.3s, padding 0.3s, box-shadow 0.3s, background 0.3s;
       box-shadow: 0 4px 16px #d7263d33;
-        font-family: 'Segoe Script', 'Comic Sans MS', cursive, Arial, sans-serif;
-        letter-spacing: 1px;
-      }
+      font-family: 'Segoe Script', 'Comic Sans MS', cursive, Arial, sans-serif;
+      letter-spacing: 1px;
+    }
+
     .btn-no {
       background: #d7263d;
       color: white;
       border: 2px solid #fff6f6;
-      }
+    }
+
     .btn-yes {
       background: #ffb6b9;
       color: #d7263d;
       border: 2px solid #fff6f6;
-      }
+    }
+
     .small {
       font-size: 16px !important;
       padding: 8px 20px !important;
-      }
+    }
+
     .large {
       font-size: 32px !important;
       padding: 24px 60px !important;
-      }
+    }
+
     .btn:hover {
       box-shadow: 0 16px 48px #d7263d99, 0 0 24px #fff6f6;
       background: #fff6f6;
@@ -187,101 +206,95 @@
       filter: brightness(1.2) drop-shadow(0 0 16px #fff6f6);
       transition: box-shadow 0.3s, background 0.3s, color 0.3s, transform 0.3s, filter 0.3s;
     }
+
     .btn-yes:hover {
       background: #ffe3e3;
       color: #d7263d;
     }
+
     .btn-no:hover {
       background: #d7263d;
       color: #fff6f6;
     }
-    @media (max-width: 600px) {
-      body {
-        margin-top: 40px;
-      }
-      #question {
-        font-size: 32px;
-      }
-      .btn {
-        font-size: 18px;
-        padding: 12px 24px;
-      }
-      }
   </style>
 </head>
 <body>
-    <audio id="loveSound" src="love.mp3"></audio>
+  <audio id="loveSound" src="love.mp3"></audio>
   <div id="question"><span id="valentine-text">Will you be my Valentine</span><span id="question-marks">?</span></div>
   <button id="yes" class="btn btn-yes">Có</button>
   <button id="no" class="btn btn-no">Không</button>
 
   <script>
-                        // Hiệu ứng parallax nền
-                        document.addEventListener('mousemove', function(e) {
-                          const x = e.clientX / window.innerWidth;
-                          const y = e.clientY / window.innerHeight;
-                          document.body.style.backgroundPosition = `${50 + x*10}% ${50 + y*10}%`;
-                        });
-                    // Particles bay quanh trang
-                    function randomParticle() {
-                      const x = Math.random() * window.innerWidth;
-                      const y = Math.random() * window.innerHeight;
-                      const p = document.createElement('div');
-                      p.className = 'particle';
-                      const types = [
-                        '<svg viewBox="0 0 32 32"><path d="M16 29s-13-8.35-13-17A7 7 0 0 1 16 6a7 7 0 0 1 13 6c0 8.65-13 17-13 17z" fill="#d7263d"/></svg>',
-                        '<svg viewBox="0 0 32 32"><polygon points="16,2 20,12 31,12 22,18 25,29 16,22 7,29 10,18 1,12 12,12" fill="#ffd700"/></svg>',
-                        '<svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12" fill="#ffb6b9"/></svg>'
-                      ];
-                      p.innerHTML = types[Math.floor(Math.random() * types.length)];
-                      p.style.left = x + 'px';
-                      p.style.top = y + 'px';
-                      document.body.appendChild(p);
-                      setTimeout(() => { p.remove(); }, 3000);
-                    }
-                    setInterval(randomParticle, 400);
-                // Nền gradient động chuyển màu, nhận biến alpha
-                let gradientStep = 0;
-                let bgAlpha = 1;
-                function animateGradient() {
-                  gradientStep += 0.01;
-                  const c1 = 221 + Math.floor(20 * Math.sin(gradientStep));
-                  const c2 = 156 + Math.floor(20 * Math.cos(gradientStep));
-                  const bg1 = `rgba(255,${c1},225,${bgAlpha})`;
-                  const bg2 = `rgba(238,${c2},167,${bgAlpha})`;
-                  document.body.style.background = `linear-gradient(135deg, ${bg1} 0%, ${bg2} 100%)`;
-                  requestAnimationFrame(animateGradient);
-                }
-                animateGradient();
-            // Hiệu ứng ánh sáng lấp lánh
-            function sparkle() {
-              const x = Math.random() * window.innerWidth;
-              const y = Math.random() * window.innerHeight;
-              const s = document.createElement('div');
-              s.className = 'sparkle';
-              s.style.left = x + 'px';
-              s.style.top = y + 'px';
-              document.body.appendChild(s);
-              setTimeout(() => { s.remove(); }, 2500);
-            }
-            setInterval(sparkle, 300);
-        // Hiệu ứng mưa trái tim 3D
-        function rainHeart3D() {
-          const x = Math.random() * window.innerWidth;
-          const heart = document.createElement('div');
-          heart.className = 'heart3d';
-          heart.style.left = x + 'px';
-          heart.style.top = '-40px';
-          heart.innerHTML = `<svg viewBox="0 0 32 32"><path d="M16 29s-13-8.35-13-17A7 7 0 0 1 16 6a7 7 0 0 1 13 6c0 8.65-13 17-13 17z" fill="#d7263d"/></svg>`;
-          document.body.appendChild(heart);
-          setTimeout(() => {
-            heart.remove();
-          }, 2200);
-        }
+    // Hiệu ứng parallax nền
+    document.addEventListener('mousemove', function(e) {
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+      document.body.style.backgroundPosition = `${50 + x*10}% ${50 + y*10}%`;
+    });
+
+    // Particles bay quanh trang
+    function randomParticle() {
+      const x = Math.random() * window.innerWidth;
+      const y = Math.random() * window.innerHeight;
+      const p = document.createElement('div');
+      p.className = 'particle';
+      const types = [
+        '<svg viewBox="0 0 32 32"><path d="M16 29s-13-8.35-13-17A7 7 0 0 1 16 6a7 7 0 0 1 13 6c0 8.65-13 17-13 17z" fill="#d7263d"/></svg>',
+        '<svg viewBox="0 0 32 32"><polygon points="16,2 20,12 31,12 22,18 25,29 16,22 7,29 10,18 1,12 12,12" fill="#ffd700"/></svg>',
+        '<svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12" fill="#ffb6b9"/></svg>'
+      ];
+      p.innerHTML = types[Math.floor(Math.random() * types.length)];
+      p.style.left = x + 'px';
+      p.style.top = y + 'px';
+      document.body.appendChild(p);
+      setTimeout(() => { p.remove(); }, 3000);
+    }
+
+    setInterval(randomParticle, 400);
+
+    // Nền gradient động chuyển màu, nhận biến alpha
+    let gradientStep = 0;
+    let bgAlpha = 1;
+    function animateGradient() {
+      gradientStep += 0.01;
+      const c1 = 221 + Math.floor(20 * Math.sin(gradientStep));
+      const c2 = 156 + Math.floor(20 * Math.cos(gradientStep));
+      const bg1 = `rgba(255,${c1},225,${bgAlpha})`;
+      const bg2 = `rgba(238,${c2},167,${bgAlpha})`;
+      document.body.style.background = `linear-gradient(135deg, ${bg1} 0%, ${bg2} 100%)`;
+      requestAnimationFrame(animateGradient);
+    }
+    animateGradient();
+
+    // Hiệu ứng ánh sáng lấp lánh
+    function sparkle() {
+      const x = Math.random() * window.innerWidth;
+      const y = Math.random() * window.innerHeight;
+      const s = document.createElement('div');
+      s.className = 'sparkle';
+      s.style.left = x + 'px';
+      s.style.top = y + 'px';
+      document.body.appendChild(s);
+      setTimeout(() => { s.remove(); }, 2500);
+    }
+    setInterval(sparkle, 300);
+
+    // Hiệu ứng mưa trái tim 3D
+    function rainHeart3D() {
+      const x = Math.random() * window.innerWidth;
+      const heart = document.createElement('div');
+      heart.className = 'heart3d';
+      heart.style.left = x + 'px';
+      heart.style.top = '-40px';
+      heart.innerHTML = `<svg viewBox="0 0 32 32"><path d="M16 29s-13-8.35-13-17A7 7 0 0 1 16 6a7 7 0 0 1 13 6c0 8.65-13 17-13 17z" fill="#d7263d"/></svg>`;
+      document.body.appendChild(heart);
+      setTimeout(() => { heart.remove(); }, 2200);
+    }
+
     let noClickCount = 0;
     const question = document.getElementById('question');
-      const valentineText = document.getElementById('valentine-text');
-      const questionMarks = document.getElementById('question-marks');
+    const valentineText = document.getElementById('valentine-text');
+    const questionMarks = document.getElementById('question-marks');
     const btnNo = document.getElementById('no');
     const btnYes = document.getElementById('yes');
 
@@ -341,12 +354,14 @@
     });
 
     btnYes.addEventListener('click', () => {
-          // Hiệu ứng avatar xoay 3D khi ấn có
-          const avatar = document.getElementById('avatar3d');
-          if (avatar) avatar.style.transform = 'translateX(-50%) rotateY(360deg)';
-        // Phát âm thanh lãng mạn
-        const loveSound = document.getElementById('loveSound');
-        if (loveSound) loveSound.play();
+      // Hiệu ứng avatar xoay 3D khi ấn có
+      const avatar = document.getElementById('avatar3d');
+      if (avatar) avatar.style.transform = 'translateX(-50%) rotateY(360deg)';
+
+      // Phát âm thanh lãng mạn
+      const loveSound = document.getElementById('loveSound');
+      if (loveSound) loveSound.play();
+
       // Hiệu ứng từng chữ xuất hiện dần
       const thankText = 'Thank you so much, my gift for you!';
       valentineText.textContent = '';
@@ -364,6 +379,7 @@
         }
       }
       typeThank();
+
       btnYes.style.display = 'none';
       btnNo.style.display = 'none';
 
